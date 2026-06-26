@@ -1,0 +1,152 @@
+/* Form Component - Futuristic Dark Theme */
+.formGroup {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: #94a3b8;
+}
+
+.required::after {
+  content: '*';
+  color: #ff6b35;
+  margin-left: 4px;
+}
+
+.input,
+.select,
+.textarea {
+  padding: 12px 16px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #4a5568;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #00d4ff;
+  background: rgba(15, 23, 42, 1);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1), 0 0 20px rgba(0, 212, 255, 0.1);
+}
+
+.input:hover,
+.select:hover,
+.textarea:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394a3b8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.select option {
+  background: #0f172a;
+  color: #fff;
+  padding: 10px;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* Error states */
+.inputError,
+.selectError,
+.textareaError {
+  border-color: #ff4757;
+}
+
+.inputError:focus,
+.selectError:focus,
+.textareaError:focus {
+  border-color: #ff4757;
+  box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.1), 0 0 20px rgba(255, 71, 87, 0.1);
+}
+
+.error {
+  color: #ff4757;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 12px;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.error::before {
+  content: '⚠';
+}
+
+/* Success state */
+.inputSuccess {
+  border-color: #00ff88;
+}
+
+.inputSuccess:focus {
+  box-shadow: 0 0 0 3px rgba(0, 255, 136, 0.1), 0 0 20px rgba(0, 255, 136, 0.1);
+}
+
+/* Disabled state */
+.input:disabled,
+.select:disabled,
+.textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: rgba(15, 23, 42, 0.4);
+}
+
+/* Inline form */
+.formInline {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.formInline .formGroup {
+  margin-bottom: 0;
+  flex: 1;
+}
+
+/* Form row for side by side inputs */
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+  
+  .formInline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

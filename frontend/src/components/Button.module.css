@@ -1,0 +1,143 @@
+/* Button Component - Futuristic Dark Theme */
+.button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.button:hover::before {
+  left: 100%;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.button:disabled::before {
+  display: none;
+}
+
+/* Primary - Orange gradient */
+.primary {
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.primary:hover {
+  background: linear-gradient(135deg, #ff8c42 0%, #ff6b35 100%);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+}
+
+/* Secondary - Blue/Cyan */
+.secondary {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  color: #0a0e17;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+}
+
+.secondary:hover {
+  background: linear-gradient(135deg, #0099ff 0%, #00d4ff 100%);
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.5);
+}
+
+/* Danger - Red */
+.danger {
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+}
+
+.danger:hover {
+  background: linear-gradient(135deg, #ff6b81 0%, #ff4757 100%);
+  box-shadow: 0 6px 20px rgba(255, 71, 87, 0.5);
+}
+
+/* Outline variant */
+.outline {
+  background: transparent;
+  border: 1px solid rgba(255, 107, 53, 0.5);
+  color: #ff6b35;
+}
+
+.outline:hover {
+  background: rgba(255, 107, 53, 0.1);
+  border-color: #ff6b35;
+  box-shadow: 0 0 15px rgba(255, 107, 53, 0.2);
+}
+
+/* Ghost variant */
+.ghost {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+}
+
+.ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* Sizes */
+.sm {
+  padding: 8px 16px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+.md {
+  padding: 12px 24px;
+  font-size: 14px;
+}
+
+.lg {
+  padding: 16px 32px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+/* Full width */
+.fullWidth {
+  width: 100%;
+}
+
+/* Icon button */
+.iconOnly {
+  padding: 12px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

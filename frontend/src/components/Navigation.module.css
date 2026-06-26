@@ -1,0 +1,333 @@
+/* Sidebar Navigation - Futuristic Dark Theme */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 260px;
+  background: linear-gradient(180deg, #0d1117 0%, #161b22 100%);
+  border-right: 1px solid rgba(0, 212, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* Logo Section */
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.logoIcon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+  animation: float 3s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.logoTitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 1.2;
+}
+
+.logoSubtitle {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 12px;
+  color: #64748b;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.collapseBtn {
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: #1a1f2e;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 50%;
+  color: #00d4ff;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.collapseBtn:hover {
+  background: #00d4ff;
+  color: #0d1117;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+
+/* Menu */
+.menu {
+  flex: 1;
+  list-style: none;
+  padding: 16px 12px;
+  margin: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.menuItem {
+  margin-bottom: 4px;
+  animation: slideInLeft 0.4s ease forwards;
+  opacity: 0;
+}
+
+.menuLink {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  color: #94a3b8;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.menuLink::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: linear-gradient(90deg, rgba(255, 107, 53, 0.2) 0%, transparent 100%);
+  transition: width 0.3s ease;
+}
+
+.menuLink:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.menuLink:hover::before {
+  width: 100%;
+}
+
+.menuLink.active {
+  background: linear-gradient(90deg, rgba(255, 107, 53, 0.15) 0%, rgba(255, 107, 53, 0.05) 100%);
+  color: #ff6b35;
+  border-left: 3px solid #ff6b35;
+}
+
+.menuIcon {
+  font-size: 20px;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+  filter: grayscale(0.3);
+  transition: filter 0.3s ease;
+}
+
+.menuLink:hover .menuIcon,
+.menuLink.active .menuIcon {
+  filter: grayscale(0);
+}
+
+.menuLabel {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.activeIndicator {
+  position: absolute;
+  right: 16px;
+  width: 6px;
+  height: 6px;
+  background: #ff6b35;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff6b35;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* User Section */
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.userAvatar {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0d1117;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+}
+
+.userInfo {
+  flex: 1;
+  overflow: hidden;
+}
+
+.userName {
+  display: block;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.userRole {
+  display: block;
+  font-size: 11px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logoutBtn {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 71, 87, 0.1);
+  border: 1px solid rgba(255, 71, 87, 0.3);
+  border-radius: 8px;
+  color: #ff4757;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.logoutBtn:hover {
+  background: #ff4757;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255, 71, 87, 0.4);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* Collapsed State */
+.collapsed .logoText,
+.collapsed .menuLabel,
+.collapsed .userInfo {
+  display: none;
+}
+
+.collapsed .logoSection {
+  justify-content: center;
+  padding: 20px 8px;
+}
+
+.collapsed .menuLink {
+  justify-content: center;
+  padding: 14px;
+}
+
+.collapsed .userSection {
+  flex-direction: column;
+  gap: 8px;
+}
+
+.collapsed .activeIndicator {
+  right: 8px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80px;
+  }
+  
+  .logoText,
+  .menuLabel,
+  .userInfo {
+    display: none;
+  }
+  
+  .logoSection {
+    justify-content: center;
+    padding: 16px 8px;
+  }
+  
+  .menuLink {
+    justify-content: center;
+    padding: 14px;
+  }
+  
+  .userSection {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .collapseBtn {
+    display: none;
+  }
+}

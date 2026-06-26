@@ -1,0 +1,268 @@
+/* Production Page - Futuristic Dark Theme */
+.production {
+  padding: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.production h1 {
+  margin: 0 0 28px 0;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.production h1::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b35, #00d4ff);
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+.production h2 {
+  margin: 0 0 24px 0;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #00d4ff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.production h3 {
+  margin: 0 0 16px 0;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 14px;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab {
+  padding: 14px 28px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.tab.active {
+  color: #ff6b35;
+  border-bottom-color: #ff6b35;
+}
+
+/* Record Card */
+.recordCard {
+  padding: 28px;
+  background: linear-gradient(145deg, #1a1f2e 0%, #151a27 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.recordCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+}
+
+/* Production Table */
+.productionTable {
+  background: linear-gradient(145deg, #1a1f2e 0%, #151a27 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.productionHeader {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 0.8fr;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.3);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #00d4ff;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.productionRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 0.8fr;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.productionRow:hover {
+  background: rgba(0, 212, 255, 0.03);
+}
+
+.productionRow:last-child {
+  border-bottom: none;
+}
+
+.productColumn {
+  flex: 1;
+  min-width: 0;
+}
+
+.quantityColumn {
+  flex: 0.5;
+  min-width: 0;
+}
+
+.expiryColumn {
+  flex: 0.5;
+  min-width: 0;
+}
+
+.notesColumn {
+  flex: 1;
+  min-width: 0;
+}
+
+.actionColumn {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.productionRow input,
+.productionRow select {
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 14px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.productionRow input:focus,
+.productionRow select:focus {
+  outline: none;
+  border-color: #00d4ff;
+  background: rgba(15, 23, 42, 1);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+}
+
+.productionRow button {
+  padding: 8px 16px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .productionHeader {
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr 0.6fr;
+    font-size: 10px;
+  }
+
+  .productionRow {
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr 0.6fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .production {
+    padding: 16px;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+  }
+
+  .productionHeader {
+    display: none;
+  }
+
+  .productionRow {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .productionRow input,
+  .productionRow select {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .productionRow button {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
