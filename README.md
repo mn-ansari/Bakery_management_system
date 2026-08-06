@@ -39,14 +39,7 @@ A full-stack bakery management system for **Nafees Bakery**, built with a Node.j
 - **Authentication**: JWT (jsonwebtoken)
 - **Validation**: express-validator
 
-### Frontend
-- **Library**: React 18
-- **Routing**: React Router v6
-- **State Management**: Zustand
-- **HTTP Client**: Axios
-- **Styling**: CSS Modules
-- **Charts**: Chart.js + react-chartjs-2
-- **Icons**: react-icons
+
 
 ## 📁 Project Structure
 
